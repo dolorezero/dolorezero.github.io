@@ -1,23 +1,266 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="it">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Unique Title</title>
-    <link rel="stylesheet" href="styles.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DoloreZero - Massaggi Professionali</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: 'Georgia', serif;
+    background-color: #f8f6f2;
+    color: #333;
+}
+
+header {
+    background: url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874') center/cover;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+}
+
+header h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+header p {
+    font-size: 1.3em;
+}
+
+.btn {
+    background-color: #6b8e7f;
+    color: white;
+    padding: 15px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 20px;
+}
+
+section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.services {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.card {
+    background: white;
+    margin: 15px;
+    padding: 25px;
+    width: 300px;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 30px;
+}
+</style>
 </head>
+
 <body>
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
-    <section>
-        <p>This is the main content of the first layout.</p>
-    </section>
-    <section>
-        <p>This is the content of the second layout.</p>
-    </section>
-    <footer>
-        <p>© 2026 by Your Name.</p>
-    </footer>
+
+<header>
+<div>
+<h1>Ritrova il tuo benessere</h1>
+<p>Massaggi professionali per schiena, cervicale e relax</p>
+<!--a href="#prenota" class="btn">Prenota ora</a-->
+</div>
+</header>
+
+<section>
+<h2>Perché scegliere DoloreZero</h2>
+<p>Riduci il dolore, sciogli le tensioni e ritrova il tuo equilibrio fisico e mentale.</p>
+</section>
+
+<section>
+<h2>I miei trattamenti</h2>
+
+<div class="services">
+
+<div class="card">
+<h3>Massaggio Rilassante</h3>
+<p>Perfetto per eliminare stress e tensioni leggere.</p>
+<a href="#prenota" class="btn">Prenota</a>
+</div>
+
+<div class="card">
+<h3>Massaggio Decontratturante</h3>
+<p>Ideale per sciogliere contratture e dolori muscolari.</p>
+<a href="#prenota" class="btn">Prenota</a>
+</div>
+
+<div class="card">
+<h3>Schiena & Cervicale</h3>
+<p>Trattamento mirato per dolori localizzati.</p>
+<a href="#prenota" class="btn">Prenota</a>
+</div>
+
+</div>
+</section>
+
+<section id="prenota">
+<h2>Prenota il tuo massaggio</h2>
+<div class="card">
+  <div class="card-header">
+    <h1>Scrivici</h1>
+    <p>Ti risponderemo entro 24 ore lavorative.</p>
+  </div>
+ 
+  <form id="contact-form" action="https://api.web3forms.com/submit" method="POST" novalidate>
+ 
+    <!-- Sostituisci con la tua chiave API Web3Forms -->
+    <input type="hidden" name="access_key" value="LA-TUA-CHIAVE-WEB3FORMS" />
+ 
+    <!-- Oggetto dell'email che riceverai -->
+    <input type="hidden" name="subject" value="Nuovo contatto dal sito" />
+ 
+    <!-- Honeypot anti-spam -->
+    <input type="checkbox" name="botcheck" style="display:none;" />
+ 
+    <p class="required-note">* Campi obbligatori</p>
+ 
+    <div class="row">
+      <div class="field">
+        <label for="nome">Nome *</label>
+        <input type="text" id="nome" name="nome" placeholder="Mario" autocomplete="given-name" required />
+      </div>
+      <div class="field">
+        <label for="cognome">Cognome *</label>
+        <input type="text" id="cognome" name="cognome" placeholder="Rossi" autocomplete="family-name" required />
+      </div>
+    </div>
+ 
+    <div class="field">
+      <label for="email">Email *</label>
+      <input type="email" id="email" name="email" placeholder="mario.rossi@esempio.it" autocomplete="email" required />
+    </div>
+ 
+    <hr class="divider" />
+ 
+    <p class="consent-label">Consensi GDPR</p>
+ 
+    <div class="checkbox-row">
+      <input type="checkbox" id="consent-privacy" name="consenso_privacy" required />
+      <label for="consent-privacy">
+        Ho letto e accetto la <a href="privacy-policy.html">Privacy Policy</a> ai sensi del Reg. UE 2016/679 (GDPR). Il trattamento è necessario per rispondere alla tua richiesta. *
+      </label>
+    </div>
+ 
+    <div class="checkbox-row">
+      <input type="checkbox" id="consent-marketing" name="consenso_marketing" />
+      <label for="consent-marketing">
+        Acconsento a ricevere comunicazioni commerciali e newsletter via email. Puoi revocare il consenso in qualsiasi momento. <span class="opt">(facoltativo)</span>
+      </label>
+    </div>
+ 
+    <div class="checkbox-row">
+      <input type="checkbox" id="consent-profiling" name="consenso_profilazione" />
+      <label for="consent-profiling">
+        Acconsento alla profilazione dei miei dati per ricevere offerte personalizzate. <span class="opt">(facoltativo)</span>
+      </label>
+    </div>
+ 
+    <div class="info-box">
+      <strong>Titolare del trattamento:</strong> [Nome Azienda SRL], [Indirizzo], P.IVA [XXXXX].
+      Dati trattati per finalità di assistenza. Conservazione: [X] anni.
+      Diritti ex artt. 15-22 GDPR: <a href="mailto:privacy@azienda.it">privacy@azienda.it</a>
+    </div>
+ 
+    <button type="submit" id="submit-btn">Invia richiesta</button>
+ 
+    <div class="msg" id="success-msg">Messaggio inviato! Ti risponderemo al più presto.</div>
+    <div class="msg" id="error-msg">Si è verificato un errore. Riprova o scrivici direttamente.</div>
+ 
+  </form>
+</div>
+ 
+<script>
+  const form = document.getElementById('contact-form');
+  const btn = document.getElementById('submit-btn');
+  const successMsg = document.getElementById('success-msg');
+  const errorMsg = document.getElementById('error-msg');
+ 
+  form.addEventListener('submit', async function (e) {
+    e.preventDefault();
+    successMsg.className = 'msg';
+    errorMsg.className = 'msg';
+ 
+    const privacy = document.getElementById('consent-privacy').checked;
+    if (!privacy) {
+      errorMsg.textContent = 'Devi accettare la Privacy Policy per inviare il modulo.';
+      errorMsg.className = 'msg error';
+      return;
+    }
+ 
+    btn.disabled = true;
+    btn.textContent = 'Invio in corso...';
+ 
+    try {
+      const data = new FormData(form);
+      const res = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        body: data
+      });
+      const json = await res.json();
+ 
+      if (json.success) {
+        form.reset();
+        successMsg.className = 'msg success';
+      } else {
+        throw new Error(json.message);
+      }
+    } catch (err) {
+      errorMsg.textContent = 'Si è verificato un errore. Riprova o scrivici direttamente.';
+      errorMsg.className = 'msg error';
+    } finally {
+      btn.disabled = false;
+      btn.textContent = 'Invia richiesta';
+    }
+  });
+</script>
+
+<!-- INSERISCI QUI IL TUO CALENDARIO -->
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/dolorezero-com/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+<div>
+<!--iframe 
+src="https​:​//calendl​y.com/dolorezero-com/60min" 
+style="width: 100%; min-width: 320px; height: 700px;" 
+frameborder="0">
+</iframe-->  
+</div>
+
+</section>
+
+<section>
+<h2>Chi sono</h2>
+<p>Sono un massaggiatore professionista specializzato in tecniche rilassanti e decontratturanti. Ogni trattamento è personalizzato per offrirti il massimo beneficio.</p>
+</section>
+<section>
+<!-- Calendly inline widget begin -->
+<div class="calendly-inline-widget" data-url="https://calendly.com/dolorezero-com/30min" style="min-width:320px;height:700px;"></div>
+<script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+<!-- Calendly inline widget end -->
+</section>section>  
+<footer>
+<p>Contattami su WhatsApp | Email | Località</p>
+</footer>
+
 </body>
 </html>
